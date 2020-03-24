@@ -1,7 +1,6 @@
 n1 = 1;
 n2 = 1.45;
 theta1 = 0:1:90;
-theta2 = asind(n2*sind(theta1)/n1);
 
 top = n1.*cosd(theta1)-n2.*sqrt(1-sind((n1/n2).*theta1));
 bot = n1.*cosd(theta1)+n2.*sqrt(1-sind((n1/n2).*theta1));
