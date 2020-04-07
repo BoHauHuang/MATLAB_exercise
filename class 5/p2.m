@@ -1,7 +1,7 @@
 
-v = [3, 2; 1, 2];
-
-result = GSO(v);
+v = [1, 2, 3; 0, -1, 2 ; 1, 1, 0];
+v'
+result = GSO(v');
 
 function u = GSO(v)
     u = v;
@@ -18,6 +18,7 @@ function u = GSO(v)
         end
         u(:, i) = u(:, i)-sub;
     end
-    
-    u = u/norm(u);
+    for i = 1:length(u)
+        u(:, i) = u(:, i)/norm(u(:, i));
+    end
 end
